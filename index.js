@@ -95,3 +95,7 @@ app.post('/addCategory',async (req,res)=>{
   res.status(500).json({ error: 'An error occurred' });
 }
 });
+
+app.get('/ping', (req, res) => {
+  res.status(200).send("I am alive");
+})
