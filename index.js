@@ -18,7 +18,7 @@ mongoose
   })
   .catch((e) => console.log(e));
 
-app.listen(process.env.PORT_NUMBER, () => {
+app.listen(process.env.PORT || process.env.PORT_NUMBER || 3001, () => {
   console.log("Server connected");
 });
 
