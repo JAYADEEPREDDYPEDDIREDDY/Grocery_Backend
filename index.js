@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 const Category = require('./Category')
 const corsOptions = {
-  origin: process.env.FRONT_URL,
+  origin: "https://kummithigrocery.netlify.app",
   credentials: true,
 };
 app.use(cors(corsOptions));
