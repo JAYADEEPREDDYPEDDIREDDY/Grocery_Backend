@@ -17,7 +17,12 @@ mongoose
     console.log("DB CONNECTED");
   })
   .catch((e) => console.log(e));
-
+ app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://kummithigrocery.netlify.app');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+  });
 app.listen(process.env.PORT || process.env.PORT_NUMBER || 3001, () => {
   console.log("Server connected");
 });
